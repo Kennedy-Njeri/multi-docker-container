@@ -7,7 +7,6 @@ services:
 before_install:
   - docker build -t 30199278/react-test -f ./client/Dockerfile.dev ./client
 
-#make sure test script exits
 script:
   - docker run -e CI=true 30199278/react-test npm run test — — coverage
 
